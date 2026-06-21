@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 · 再次遇见，持续关注</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f6f0;
+            font-family: "Noto Serif SC", "Source Han Serif", "STSong", "Georgia", serif;
+            color: #2e2b27;
+            line-height: 1.75;
+            padding: 2rem 1.5rem 3rem;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 2.8rem;
+            padding: 2.2rem 0 1rem;
+            border-bottom: 1px solid #e2dbce;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: #3a3530;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero .sub {
+            font-size: 0.95rem;
+            color: #7b7369;
+            border-top: 1px dashed #d6cfc0;
+            display: inline-block;
+            padding-top: 0.6rem;
+            margin-top: 0.2rem;
+        }
+
+        .intro-box {
+            background-color: #f0ece4;
+            padding: 1.8rem 2rem;
+            border-left: 4px solid #b8a99a;
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+            font-size: 1.05rem;
+        }
+
+        .intro-box p {
+            margin-bottom: 0.6rem;
+        }
+
+        .intro-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro-box strong {
+            font-weight: 600;
+            color: #4d443b;
+        }
+
+        .section-title {
+            font-size: 1.45rem;
+            font-weight: 500;
+            margin: 2.2rem 0 1rem;
+            color: #4a423b;
+            border-left: 3px solid #b8a99a;
+            padding-left: 1rem;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.8rem 0;
+        }
+
+        .card {
+            background: #fcfaf7;
+            padding: 1.5rem 1.4rem;
+            border: 1px solid #e7dfd3;
+            border-radius: 12px;
+            flex: 1 1 220px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #4d443b;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4f4840;
+        }
+
+        .tip-block {
+            background: #ece7dd;
+            padding: 1.2rem 1.6rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            font-size: 0.98rem;
+            color: #3d3731;
+            border: 1px solid #dbd2c2;
+        }
+
+        .tip-block::before {
+            content: "💡 使用建议 ";
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #5f5448;
+        }
+
+        .faq-mini {
+            margin: 2.2rem 0;
+        }
+
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e3dbcd;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #4d443b;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: #5b5248;
+        }
+
+        .cta-line {
+            margin: 2rem 0 1.5rem;
+            font-size: 1.05rem;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            background: #f5f0e8;
+            border-radius: 40px;
+            border: 1px solid #d9cfbf;
+        }
+
+        a {
+            color: #7b6b58;
+            text-decoration: none;
+            border-bottom: 1px solid #cbbfb0;
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        a:hover {
+            color: #4d3f32;
+            border-bottom-color: #7b6b58;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2dbce;
+            font-size: 0.85rem;
+            color: #8a7f73;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 1rem 2rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .card-grid {
+                flex-direction: column;
+            }
+            .intro-box {
+                padding: 1.2rem 1.2rem;
+            }
+            .cta-line {
+                font-size: 0.98rem;
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>华体会</h1>
+        <div class="sub">再次来访 · 日常陪伴 · 持续关注</div>
+    </div>
+
+    <div class="intro-box">
+        <p><strong>有时候，一个平台就像一位老邻居——不必天天见面，但你知道它就在那里。</strong></p>
+        <p>再次打开书签夹，或者从浏览记录里翻到它，心里有种踏实的熟悉感。<br>
+        我们称之为「<a href="https://main-app-hth.com.cn">华体会</a>」的地方，就是这样一个存在。没有喧闹的弹窗，也没有过分的催促，只有你需要的那些内容、工具和互动，安静地等着你回来。</p>
+        <p>它不追求成为你唯一的去处，但希望每次你想起时，都能顺手打开，像翻一本常读常新的手边书。</p>
+    </div>
+
+    <div class="section-title">· 三两个亮点 ·</div>
+
+    <div class="card-grid">
+        <div class="card">
+            <h3>📌 收藏即重逢</h3>
+            <p>把页面加入收藏夹，就像在书里夹一枚书签。下次想回来时，不必费力寻找——华体会就在那里，等你随手点开。</p>
+        </div>
+        <div class="card">
+            <h3>🔄 内容自然流动</h3>
+            <p>不管是新消息还是老朋友留下的痕迹，页面设计不刻意制造焦虑，让你按自己的节奏浏览、发现、参与。</p>
+        </div>
+        <div class="card">
+            <h3>🌿 克制的提醒</h3>
+            <p>没有无休止的推送。即使隔了一段时间没来，重新打开时依然熟悉，不会因为错过什么而感到慌乱。</p>
+        </div>
+    </div>
+
+    <div class="tip-block">
+        如果你习惯把常用站点放在浏览器书签栏，不妨把「华体会」也加进去。<br>
+        或者，在手机桌面建一个快捷方式——下次通勤、等候、休息时，随手点开它，看看有没有新东西，或者只是逛逛熟悉的老角落。
+    </div>
+
+    <div class="section-title">· 常见想法 ·</div>
+
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="faq-q">🤔 隔了很久没来，会不会找不到之前看的内容？</div>
+            <div class="faq-a">不会。网站保留了基本的浏览脉络，你大可以按自己的节奏重新熟悉，它不会因为你离开一阵子就变得陌生。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">📎 把链接存在哪里比较方便？</div>
+            <div class="faq-a">浏览器收藏夹、笔记软件里的一个链接、或者直接记住网址都可以。最重要的是：你知道它在那里，随时可以去。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">🔁 每次来都会看到新东西吗？</div>
+            <div class="faq-a">有时有更新，有时没有。这不是一个需要「打卡」的地方——你来了，就是最好的使用方式。</div>
+        </div>
+    </div>
+
+    <div class="cta-line">
+        ⏳ 如果你想在下次想起时能立刻找到这里，现在就可以把「<a href="https://main-app-hth.com.cn">华体会</a>」存进书签。
+    </div>
+
+    <div class="footer-note">
+        华体会 · 一个可以再度访问的地方<br>
+        （本页面仅作介绍，内容真实克制，不含诱导性表述）
+    </div>
+
+</body>
+</html>
