@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷竞技 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(160deg, #fbe9e7 0%, #ffe3d0 35%, #fddac4 70%, #f7d2b6 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.2rem;
+      line-height: 1.7;
+    }
+
+    .page-wrapper {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* 卡片系统 */
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(2px);
+      border-radius: 32px;
+      box-shadow: 0 12px 28px rgba(160, 90, 50, 0.12), 0 4px 12px rgba(180, 100, 60, 0.06);
+      padding: 2.5rem 2.8rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s ease;
+      border: 1px solid rgba(255, 215, 190, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 1.8rem 1.5rem;
+      }
+    }
+
+    /* hero 区域 - 暖白柔和 */
+    .hero {
+      text-align: center;
+      padding: 3.5rem 2rem 2.8rem;
+      background: rgba(255, 241, 233, 0.7);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(245, 200, 175, 0.4);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #6d3f2a;
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+
+    .hero .sub {
+      font-size: 1.2rem;
+      color: #7b5542;
+      opacity: 0.9;
+      font-weight: 380;
+      max-width: 480px;
+      margin: 0 auto 1.2rem auto;
+    }
+
+    .hero .tagline {
+      font-size: 1rem;
+      color: #8b5f49;
+      background: rgba(235, 215, 200, 0.4);
+      display: inline-block;
+      padding: 0.3rem 1.6rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(220, 180, 160, 0.3);
+    }
+
+    /* 段落排版 */
+    .card p {
+      color: #3f2c22;
+      margin-bottom: 1.1rem;
+      font-size: 1rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      font-weight: 480;
+      color: #572f1e;
+      margin-bottom: 1.2rem;
+      border-left: 5px solid #cb8f70;
+      padding-left: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 440;
+      color: #623b28;
+      margin: 1.6rem 0 0.6rem 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0 0.8rem 0;
+    }
+
+    .feature-item {
+      background: rgba(251, 235, 226, 0.5);
+      padding: 1.2rem 1rem;
+      border-radius: 24px;
+      text-align: center;
+      border: 1px solid rgba(210, 165, 140, 0.2);
+    }
+
+    .feature-item .num {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #bb7d5e;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-item .label {
+      font-weight: 420;
+      color: #4b3225;
+      font-size: 0.95rem;
+    }
+
+    /* faq 摘要 */
+    .faq-item {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed rgba(190, 140, 115, 0.2);
+    }
+
+    .faq-item:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 470;
+      color: #4a2d1e;
+      margin-bottom: 0.2rem;
+      font-size: 1.02rem;
+    }
+
+    .faq-a {
+      color: #4f382c;
+      font-size: 0.95rem;
+      padding-left: 0.5rem;
+    }
+
+    /* 圆角按钮感链接 */
+    .btn-link {
+      display: inline-block;
+      background: #e7cdbb;
+      color: #461f0f;
+      text-decoration: none;
+      padding: 0.3rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 450;
+      border: 1px solid rgba(180, 120, 90, 0.3);
+      transition: background 0.2s, box-shadow 0.15s;
+      box-shadow: 0 2px 6px rgba(140, 70, 30, 0.04);
+    }
+
+    .btn-link:hover {
+      background: #dfbea8;
+      box-shadow: 0 4px 10px rgba(140, 70, 30, 0.08);
+    }
+
+    .inline-link {
+      color: #8a4e31;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid rgba(180, 110, 75, 0.3);
+      transition: border-color 0.15s;
+    }
+
+    .inline-link:hover {
+      border-bottom-color: #8a4e31;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      justify-content: center;
+      margin-top: 1rem;
+      color: #5b4033;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: #7c503b;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .footer-links a:hover {
+      border-bottom-color: #7c503b;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #785a49;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      opacity: 0.8;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(190, 140, 115, 0.25);
+      margin: 1.8rem 0;
+    }
+
+    .small-meta {
+      color: #6f4f3d;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HERO 区 -->
+  <div class="card hero">
+    <h1>雷竞技</h1>
+    <div class="sub">by-rayesports.com · 一个站点的朴素介绍</div>
+    <div class="tagline">理解一个站点，从它的轮廓开始</div>
+  </div>
+
+  <!-- 介绍 / 可信说明 -->
+  <div class="card">
+    <h2>站点印象</h2>
+    <p>
+      在这里，我们试着用平实的语言描述 <a href="https://by-rayesports.com" class="inline-link">雷竞技</a> 所呈现的面貌。
+      它不是一个门户，更像一处安静的角落：提供有关竞技与数字内容的索引、信息聚合以及一些精选的链接整理。
+      没有浮夸的标语，只有持续的维护与整理。
+    </p>
+    <p>
+      从访问者的角度看，这个站点的结构偏向于实用与可读。内容围绕几个核心版块展开，每次更新都保留了克制的排版习惯。
+      我们更愿意把精力放在信息的准确性和分类的清晰度上，而不是追逐短暂的流量热点。
+    </p>
+  </div>
+
+  <!-- 优势区 · 卡片内网格 -->
+  <div class="card">
+    <h2>常态与特点</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="num">◈</div>
+        <div class="label">信息整理<br>分类清晰</div>
+      </div>
+      <div class="feature-item">
+        <div class="num">◈</div>
+        <div class="label">更新克制<br>不堆砌内容</div>
+      </div>
+      <div class="feature-item">
+        <div class="num">◈</div>
+        <div class="label">链接有效<br>定期复核</div>
+      </div>
+      <div class="feature-item">
+        <div class="num">◈</div>
+        <div class="label">界面轻量<br>减少干扰</div>
+      </div>
+    </div>
+    <p style="margin-top: 1.2rem;">
+      以上几点并非宣称的优势，而是我们一直遵循的编辑习惯。站点背后的维护者更看重长期可用性，而非短期外观。
+      正因如此，<a href="https://by-rayesports.com" class="inline-link">雷竞技</a> 的内容节奏偏慢，但每一条收录都经过筛选。
+    </p>
+  </div>
+
+  <!-- 说明区 · 场景与提示 -->
+  <div class="card">
+    <h2>使用场景与提醒</h2>
+    <p>
+      如果你正在寻找某个特定方向的资料索引，或者希望浏览一些经过筛选的链接，
+      可以前往 <a href="https://by-rayesports.com" class="inline-link">雷竞技</a> 看一看。
+      站点内容不涉及任何形式的保证或承诺，仅仅作为公开的信息集合存在。
+    </p>
+    <p>
+      另外需要说明的是，本站不收集用户的个人隐私数据，也没有嵌入第三方追踪脚本。
+      访问时所见即所得，所有的链接都指向外部资源，建议根据自身判断决定是否进一步浏览。
+    </p>
+    <h3>一点提醒</h3>
+    <p>
+      互联网信息变动频繁，我们虽然会定期检查链接的有效性，但仍无法保证外部页面永久不变。
+      如果你发现某个链接失效，或者对内容有疑问，可以通过站内反馈渠道（如果存在的话）联系维护者。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要区 -->
+  <div class="card">
+    <h2>常见疑问 · 摘要</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">这个站点主要提供什么？</div>
+      <div class="faq-a">主要是分类整理过的链接、资讯摘要以及相关领域的信息参考，偏向于实用索引。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">内容更新频率如何？</div>
+      <div class="faq-a">没有固定周期，通常每两周或每月整合一次，避免信息过载。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">站内是否有交互功能？</div>
+      <div class="faq-a">目前以静态展示为主，没有用户登录、评论或论坛功能。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">链接会跳转到哪些网站？</div>
+      <div class="faq-a">大部分是公开的资讯站点、赛事相关或内容平台，不包含灰色或违规地址。</div>
+    </div>
+
+    <div style="text-align: right; margin-top: 1rem;">
+      <span class="small-meta">— 以上摘要仅为示意，更多信息以实际站点为准</span>
+    </div>
+  </div>
+
+  <!-- 底部链接区 -->
+  <div class="card" style="padding: 1.8rem 2rem;">
+    <div class="footer-links">
+      <a href="https://by-rayesports.com" class="btn-link">雷竞技</a>
+      <a href="https://by-rayesports.com" style="color:#764b36;">雷竞技</a>
+      <span style="color:#7a5543;">·</span>
+      <a href="https://by-rayesports.com" style="color:#764b36;">雷竞技</a>
+      <span style="color:#7a5543;">·</span>
+      <a href="https://by-rayesports.com" style="color:#764b36;">雷竞技</a>
+    </div>
+    <div class="footer-note">
+      by-rayesports.com · 一个安静的索引角落<br>
+      本页仅为介绍，不构成任何形式的合作或担保。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
